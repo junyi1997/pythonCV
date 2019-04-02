@@ -1,6 +1,6 @@
 import cv2
 
-im1 = cv2.imread('lena.jpg')
+im1 = cv2.imread('text.jpg')
 cv2.imshow('image1', im1)
 cv2.waitKey(0)
 
