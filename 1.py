@@ -3,10 +3,10 @@ import cv2
 import numpy as np
 
 def adj():
-    img = cv2.imread('test.jpg')
+    img = cv2.imread('test1.jpg')
     resImg1 = cv2.resize(img, (100,100), interpolation=cv2.INTER_CUBIC)
 
-    cv2.imshow('img', img)
+    #cv2.imshow('img', img)
     cv2.imshow('resImg', resImg1)
     cv2.waitKey()
     
