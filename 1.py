@@ -1,7 +1,6 @@
 
 import cv2
 import numpy as np
-import time
 
 def adj():
     img = cv2.imread('test1.jpg')
@@ -11,7 +10,6 @@ def adj():
     cv2.imshow('resImg', resImg1)
     cv2.waitKey()
     
-    cv2.destroyAllWindows() 
 
 def make_photo():
     """使用opencv拍照"""
@@ -24,12 +22,10 @@ def make_photo():
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 file_name = "test1.jpeg"
                 cv2.imwrite(file_name, frame)
-                sleep(2)
-                adj()
                 break
         else:
             break
- 
+    adj()
     cap.release()
     cv2.destroyAllWindows()
  
