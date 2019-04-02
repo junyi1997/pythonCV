@@ -1,3 +1,7 @@
+'''
+將圖像轉會為可放入GUI的大小
+'''
+
 
 import cv2
 import numpy as np
