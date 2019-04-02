@@ -1,9 +1,14 @@
 
 import cv2
 import numpy as np
-import adj
 
+def adj(file_name):
+    img = cv2.imread(file_name)
+    resImg1 = cv2.resize(img, (100,100), interpolation=cv2.INTER_CUBIC)
 
+    #cv2.imshow('img', img)
+    cv2.imshow('resImg', resImg1)
+    cv2.waitKey()
     
 
 def make_photo():
@@ -20,12 +25,7 @@ def make_photo():
                 break
         else:
             break
-    adj.img = cv2.imread(file_name)
-    adj.resImg1 = cv2.resize(adj.img, (100,100), interpolation=cv2.INTER_CUBIC)
-
-    #cv2.imshow('img', img)
-    adj.cv2.imshow('resImg', adj.resImg1)
-    adj.cv2.waitKey()
+    adj(file_name)
     cap.release()
     cv2.destroyAllWindows()
  
