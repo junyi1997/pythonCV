@@ -22,7 +22,7 @@ def make_photo():
             # 等待按键q操作关闭摄像头
             
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                file_name = "test1.jpeg"
+                file_name = "test1.jpg"
                 cv2.imwrite(file_name, frame)
 
                 break
