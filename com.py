@@ -20,16 +20,17 @@ def make_photo():
         if ret:
             cv2.imshow("capture", frame)  # 弹窗口
             # 等待按键q操作关闭摄像头12313
-            '''
+            
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 file_name = "test.jpg"
                 cv2.imwrite(file_name, frame)
 
                 break
-            '''    
+               
             file_name = "test1.jpg"
             cv2.imwrite(file_name, frame)  
-            break  
+            break 
+            ''' 
         else:
             break
     adj(file_name)
