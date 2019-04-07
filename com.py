@@ -3,7 +3,6 @@ import cv2
 import numpy as np
 
 def adj(file_name):
-    print("影像處理中")
     img = cv2.imread(file_name)
     resImg1 = cv2.resize(img, (100,100), interpolation=cv2.INTER_CUBIC)
 
@@ -19,7 +18,7 @@ def make_photo():
         ret, frame = cap.read()
         if ret:
             cv2.imshow("capture", frame)  # 弹窗口
-            file_name = "test1.jpg"
+            file_name = "test.jpg"
             cv2.imwrite(file_name, frame)
 
         else:
