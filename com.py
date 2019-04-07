@@ -26,7 +26,7 @@ def make_photo():
                 cv2.imwrite(file_name, frame)
 
                 break
-               
+            '''   
             file_name = "test1.jpg"
             cv2.imwrite(file_name, frame)  
             break 
