@@ -19,7 +19,7 @@ def make_photo():
     while True:
         ret, frame = cap.read()
         if ret:
-            cv2.imshow("capture", frame)  # 弹窗口
+            # cv2.imshow("capture", frame)  # 弹窗口
             # 等待按键q操作关闭摄像头12313
             '''
             if cv2.waitKey(1) & 0xFF == ord('q'):
