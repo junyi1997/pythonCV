@@ -1,6 +1,7 @@
 
 import cv2
 import numpy as np
+import time
 
 def adj(file_name):
     print("影像處理中")
@@ -20,17 +21,18 @@ def make_photo():
         if ret:
             cv2.imshow("capture", frame)  # 弹窗口
             # 等待按键q操作关闭摄像头12313
-            
+            '''
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 file_name = "test.jpg"
                 cv2.imwrite(file_name, frame)
 
                 break
             '''   
+            sleep(1)
             file_name = "test1.jpg"
             cv2.imwrite(file_name, frame)  
             break 
-            ''' 
+            
         else:
             break
     adj(file_name)
