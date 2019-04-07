@@ -28,7 +28,8 @@ def make_photo():
                 break
             '''    
             file_name = "test.jpg"
-            cv2.imwrite(file_name, frame)    
+            cv2.imwrite(file_name, frame)  
+            break  
         else:
             break
     adj(file_name)
