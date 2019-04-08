@@ -36,10 +36,10 @@ def make_photo():
             
         else:
             break
-    adj(file_name)
+    adj(file_name,c)
     cap.release()
     cv2.destroyAllWindows()
-    p(c)
+    p()
 
 def p():
     photo=tk.PhotoImage(file=r"./test1.jpg")
