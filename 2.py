@@ -39,10 +39,10 @@ def make_photo():
     adj(file_name,c)
     cap.release()
     cv2.destroyAllWindows()
-    p()
+    p(c)
 
 def p():
-    photo=tk.PhotoImage(file=r"./test1.jpg")
+    photo=tk.PhotoImage(file=r"./"+c)
     label=tk.Label(win,image=photo, bg='white')  #图片
     label.pack()
 
