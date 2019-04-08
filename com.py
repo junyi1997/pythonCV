@@ -12,33 +12,34 @@ def adj(file_name):
     cv2.imshow('resImg', resImg1)
     cv2.waitKey()
     
+while sum1<10:
+    def make_photo():
+        """使用opencv拍照"""
+        cap = cv2.VideoCapture(0)  # 默认的摄像头
+        while True:
+            ret, frame = cap.read()
+            if ret:
+                # cv2.imshow("capture", frame)  # 弹窗口
+                # 等待按键q操作关闭摄像头12313
+                '''
+                if cv2.waitKey(1) & 0xFF == ord('q'):
+                    file_name = "test.jpg"
+                    cv2.imwrite(file_name, frame)
 
-def make_photo():
-    """使用opencv拍照"""
-    cap = cv2.VideoCapture(0)  # 默认的摄像头
-    while True:
-        ret, frame = cap.read()
-        if ret:
-            # cv2.imshow("capture", frame)  # 弹窗口
-            # 等待按键q操作关闭摄像头12313
-            '''
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                file_name = "test.jpg"
-                cv2.imwrite(file_name, frame)
-
+                    break
+                '''   
+                time.sleep(1)
+                c="test"+str(sum1)+".jpg"
+                file_name =c
+                cv2.imwrite(file_name, frame)  
+                break 
+                
+            else:
                 break
-            '''   
-            time.sleep(1)
-            c="test"+str(sum1)+".jpg"
-            file_name =c
-            cv2.imwrite(file_name, frame)  
-            break 
-            
-        else:
-            break
-    adj(file_name)
-    cap.release()
-    cv2.destroyAllWindows()
+        adj(file_name)
+        sum1=sum1+1
+        cap.release()
+        cv2.destroyAllWindows()
  
 if __name__ == '__main__':
     make_photo()
