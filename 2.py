@@ -1,8 +1,9 @@
 import tkinter as tk
-import cv2
-import numpy as np
-import time
+#import cv2
+#import numpy as np
+#import time
 sum1=1
+'''
 def adj(file_name,c):
     print("影像處理中")
     img = cv2.imread(file_name)
@@ -21,13 +22,13 @@ def make_photo():
         if ret:
             # cv2.imshow("capture", frame)  # 弹窗口
             # 等待按键q操作关闭摄像头12313
-            '''
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                file_name = "test.jpg"
-                cv2.imwrite(file_name, frame)
+'''
+            #if cv2.waitKey(1) & 0xFF == ord('q'):
+            #    file_name = "test.jpg"
+            #    cv2.imwrite(file_name, frame)
 
-                break
-            '''   
+            #    break
+''' 
             time.sleep(1)
             c="test"+str(sum1)+".jpg"
             file_name =c
@@ -40,17 +41,17 @@ def make_photo():
     cap.release()
     cv2.destroyAllWindows()
     p(c)
-
+'''
 def p():
     #photo=tk.PhotoImage(file=r"./"+c)
-    photo=tk.PhotoImage(file=r"./test1.png")
+    photo=tk.PhotoImage(file=r"./test1.jpg")
     label=tk.Label(win,image=photo,compound='center')  #图片
     label.pack()
 
 
 
 if __name__ == '__main__':
-    sum1=input("請輸入sum1值：")
+    #sum1=input("請輸入sum1值：")
     win=tk.Tk()
     #make_photo()
     p()
