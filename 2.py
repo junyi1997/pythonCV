@@ -41,7 +41,7 @@ def make_photo():
     cv2.destroyAllWindows()
     p(c)
 
-def p():
+def p(c):
     photo=tk.PhotoImage(file=r"./"+c)
     label=tk.Label(win,image=photo, bg='white')  #图片
     label.pack()
