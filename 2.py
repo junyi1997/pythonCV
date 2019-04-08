@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import time
 sum1=1
-def adj(file_name):
+def adj(file_name,c):
     print("影像處理中")
     img = cv2.imread(file_name)
     resImg1 = cv2.resize(img, (100,100), interpolation=cv2.INTER_CUBIC)
@@ -39,7 +39,7 @@ def make_photo():
     adj(file_name)
     cap.release()
     cv2.destroyAllWindows()
-    p()
+    p(c)
 
 def p():
     photo=tk.PhotoImage(file=r"./test1.jpg")
