@@ -43,7 +43,7 @@ def make_photo():
 
 def p():
     #photo=tk.PhotoImage(file=r"./"+c)
-    photo=tk.PhotoImage(file=r"./test.jpg")
+    photo=tk.PhotoImage(file=r"./test1.png")
     label=tk.Label(win,image=photo, bg='white')  #图片
     label.pack()
 
