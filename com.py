@@ -2,7 +2,7 @@
 import cv2
 import numpy as np
 import time
-
+sum1=1
 def adj(file_name):
     print("影像處理中")
     img = cv2.imread(file_name)
