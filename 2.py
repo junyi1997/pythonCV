@@ -31,7 +31,7 @@ def make_photo():
             time.sleep(1)
             c="test"+str(sum1)+".jpg"
             file_name =c
-            cv2.imwrite(file_name, frame)  
+            #cv2.imwrite(file_name, frame)  
             break 
             
         else:
@@ -41,8 +41,9 @@ def make_photo():
     cv2.destroyAllWindows()
     p(c)
 
-def p(c):
-    photo=tk.PhotoImage(file=r"./"+c)
+def p():
+    #photo=tk.PhotoImage(file=r"./"+c)
+    photo=tk.PhotoImage(file=r"./test.jpg")
     label=tk.Label(win,image=photo, bg='white')  #图片
     label.pack()
 
@@ -51,6 +52,7 @@ def p(c):
 if __name__ == '__main__':
     sum1=input("請輸入sum1值：")
     win=tk.Tk()
-    make_photo()
+    #make_photo()
+    p()
     win.mainloop()
 
