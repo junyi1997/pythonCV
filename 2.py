@@ -7,7 +7,7 @@ def adj(file_name):
     print("影像處理中")
     img = cv2.imread(file_name)
     resImg1 = cv2.resize(img, (100,100), interpolation=cv2.INTER_CUBIC)
-
+    c=resImg1
     #cv2.imshow('img', img)
     cv2.imshow('resImg', resImg1)
     cv2.waitKey()
@@ -40,6 +40,7 @@ def make_photo():
     cap.release()
     cv2.destroyAllWindows()
     p()
+
 def p():
     photo=tk.PhotoImage(file=r"./test1.jpg")
     label=tk.Label(win,image=photo, bg='white')  #图片
