@@ -48,6 +48,7 @@ def make_photo(c):
 
 
 def p(c):
+    print("進入Tk頁面")
     win = tk.Tk()
     im=Image.open(c)
     img=ImageTk.PhotoImage(im)
