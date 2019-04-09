@@ -60,8 +60,8 @@ def p(c):
 if __name__ == '__main__':
     sum1=input("請輸入sum1值：")
     c="test"+str(sum1)+".jpg"
-    make_photo(sum1)
-    #p(c)
+    #make_photo(sum1)
+    p(c)
     
 '''
 from PIL import Image,ImageTk
