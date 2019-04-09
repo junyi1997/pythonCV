@@ -70,7 +70,7 @@ import tkinter as tk
 # 简单插入显示
 def show_jpg():
     root = tk.Tk()
-    im=Image.open("test.jpg")
+    im=Image.open("test1.jpg")
     img=ImageTk.PhotoImage(im)
     imLabel=tk.Label(root,image=img).pack()
     root.mainloop()
