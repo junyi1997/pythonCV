@@ -34,7 +34,7 @@ def make_photo():
             #    break
             
             time.sleep(1)
-            c="test"+str(sum1)+".jpg"
+            #c="test"+str(sum1)+".jpg"
             print(c)
             file_name = c
             cv2.imwrite(file_name, frame)  
@@ -59,7 +59,7 @@ def p(c):
 
 if __name__ == '__main__':
     sum1=input("請輸入sum1值：")
-    #c="test"+str(sum1)+".jpg"
+    c="test"+str(sum1)+".jpg"
     make_photo()
     #p(c)
     
