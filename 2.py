@@ -21,27 +21,25 @@ def adj(file_name,c):
 def make_photo(sum1):
     """使用opencv拍照"""
     cap = cv2.VideoCapture(0)  # 默认的摄像头
-    while True:
-        ret, frame = cap.read()
-        if ret:
-            #cv2.imshow("capture", frame)  # 弹窗口
-            # 等待按键q操作关闭摄像头12313
+    #while True:
+    ret, frame = cap.read()
+    if ret:
+        #cv2.imshow("capture", frame)  # 弹窗口
+        # 等待按键q操作关闭摄像头12313
 
-            #if cv2.waitKey(1) & 0xFF == ord('q'):
-            #    c="test"+str(sum1)+".jpg"
-            #    file_name =c
-            #    cv2.imwrite(file_name, frame)
-            #    break
+        #if cv2.waitKey(1) & 0xFF == ord('q'):
+        #    file_name =c
+        #    cv2.imwrite(file_name, frame)
+        #    break
+        
+        time.sleep(1)
+        print(c)
+        file_name =c
+        #cv2.imwrite(file_name, frame)  
+        #break 
             
-            time.sleep(1)
-            c="test"+str(sum1)+".jpg"
-            print(c)
-            file_name = "test"+str(sum1)+".jpg"
-            cv2.imwrite(file_name, frame)  
-            break 
-            
-        else:
-            break
+        #else:
+            #break
     adj(file_name,c)
     cap.release()
     cv2.destroyAllWindows()
@@ -60,8 +58,8 @@ def p(c):
 if __name__ == '__main__':
     sum1=input("請輸入sum1值：")
     c="test"+str(sum1)+".jpg"
-    #make_photo(sum1)
-    p(c)
+    make_photo(c)
+    #p(c)
     
 '''
 from PIL import Image,ImageTk
