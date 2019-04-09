@@ -1,4 +1,4 @@
-
+'''
 from PIL import Image,ImageTk
 import tkinter as tk
 
@@ -77,4 +77,4 @@ def show_jpg():
 
 if __name__ == '__main__':
     show_jpg()
-'''
+
