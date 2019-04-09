@@ -44,7 +44,7 @@ def make_photo():
     adj(file_name,c)
     cap.release()
     cv2.destroyAllWindows()
-    p(c)
+    #p(c)
 
 
 def p(c):
