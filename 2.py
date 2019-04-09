@@ -58,7 +58,7 @@ def p(c):
 
 if __name__ == '__main__':
     sum1=input("請輸入sum1值：")
-    c="test"+str(sum1)+".jpg"
+    #c="test"+str(sum1)+".jpg"
     make_photo()
     #p(c)
     
