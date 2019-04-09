@@ -1,4 +1,4 @@
-'''
+
 from PIL import Image,ImageTk
 import tkinter as tk
 
@@ -36,7 +36,7 @@ def make_photo(sum1):
             time.sleep(1)
             c="test"+str(sum1)+".jpg"
             print(c)
-            file_name = c
+            file_name = "test"+str(sum1)+".jpg"
             cv2.imwrite(file_name, frame)  
             break 
             
@@ -77,4 +77,4 @@ def show_jpg():
 
 if __name__ == '__main__':
     show_jpg()
-
+'''
