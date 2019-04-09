@@ -14,32 +14,32 @@ def adj(file_name,c):
     resImg1 = cv2.resize(img, (100,100), interpolation=cv2.INTER_CUBIC)
     cv2.imwrite(c,resImg1)
     #cv2.imshow('img', img)
-    cv2.imshow('resImg', resImg1)
+    #cv2.imshow('resImg', resImg1)
     cv2.waitKey()
 
 
 def make_photo(sum1):
     """使用opencv拍照"""
     cap = cv2.VideoCapture(0)  # 默认的摄像头
-    #while True:
-    ret, frame = cap.read()
-    if ret:
-        #cv2.imshow("capture", frame)  # 弹窗口
-        # 等待按键q操作关闭摄像头12313
+    while True:
+        ret, frame = cap.read()
+        if ret:
+            cv2.imshow("capture", frame)  # 弹窗口
+            # 等待按键q操作关闭摄像头12313
 
-        #if cv2.waitKey(1) & 0xFF == ord('q'):
-        #    file_name =c
-        #    cv2.imwrite(file_name, frame)
-        #    break
-        
-        time.sleep(1)
-        print(c)
-        file_name =c
-        #cv2.imwrite(file_name, frame)  
-        #break 
-            
-        #else:
-            #break
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                file_name =c
+                #cv2.imwrite(file_name, frame)
+                break
+            '''
+            time.sleep(1)
+            print(c)
+            file_name =c
+            #cv2.imwrite(file_name, frame)  
+            break 
+            '''
+        else:
+            break
     adj(file_name,c)
     cap.release()
     cv2.destroyAllWindows()
