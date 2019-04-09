@@ -29,7 +29,7 @@ def make_photo(sum1):
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 file_name =c
-                #cv2.imwrite(file_name, frame)
+                cv2.imwrite(file_name, frame)
                 break
             '''
             time.sleep(1)
