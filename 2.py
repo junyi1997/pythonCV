@@ -17,6 +17,7 @@ def adj(c):
     #cv2.imshow('img', img)
     #cv2.imshow('resImg', resImg1)
     cv2.waitKey()
+    p(c)
 
 
 def make_photo(c):
@@ -44,7 +45,7 @@ def make_photo(c):
     adj(c)
     cap.release()
     cv2.destroyAllWindows()
-    p(c)
+    
 
 
 def p(c):
