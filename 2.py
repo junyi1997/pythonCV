@@ -22,13 +22,15 @@ def adj(c):
 
 def make_photo(c):
     """使用opencv拍照"""
-    cap = cv2.VideoCapture(0)  # 默认的摄像头
+    cap = cv2.VideoCapture(0)  # 選擇第一隻攝影機
     while True:
-        ret, frame = cap.read()
+        ret, frame = cap.read() # 從攝影機擷取一張影像
         if ret:
-            cv2.imshow("capture", frame)  # 弹窗口
-            # 等待按键q操作关闭摄像头
-
+            cv2.imshow("capture", frame)  # 顯示圖片
+            
+            
+            
+            # 若按下 q 鍵則離開迴圈
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 #file_name =c
                 cv2.imwrite(c, frame)
@@ -41,9 +43,12 @@ def make_photo(c):
             break 
             '''
         else:
+            print("沒有影像")
             break
     adj(c)
+    # 釋放攝影機
     cap.release()
+    # 關閉所有 OpenCV 視窗
     cv2.destroyAllWindows()
     
 
