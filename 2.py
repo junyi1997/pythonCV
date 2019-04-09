@@ -1,5 +1,7 @@
+
 from PIL import Image,ImageTk
 import tkinter as tk
+
 import cv2
 import numpy as np
 import time
@@ -56,7 +58,7 @@ def p(c):
 
 if __name__ == '__main__':
     sum1=input("請輸入sum1值：")
-    c="test"+str(sum1)+".jpg"
+    #c="test"+str(sum1)+".jpg"
     make_photo()
     #p(c)
     
@@ -74,5 +76,4 @@ def show_jpg():
 
 if __name__ == '__main__':
     show_jpg()
-
 '''
