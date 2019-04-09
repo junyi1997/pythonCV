@@ -16,7 +16,7 @@ def adj(c):
     cv2.imwrite(c,resImg1)
     #cv2.imshow('img', img)
     #cv2.imshow('resImg', resImg1)
-    cv2.waitKey()
+    #cv2.waitKey()
     p(c)
 
 
