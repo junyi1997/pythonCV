@@ -28,11 +28,11 @@ def make_photo(c):
             cv2.imshow("capture", frame)  # 弹窗口
             # 等待按键q操作关闭摄像头
 
-            #if cv2.waitKey(1) & 0xFF == ord('q'):
-                #file_name =c
-                #cv2.imwrite(file_name, frame)
-                #break
-            
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                file_name =c
+                cv2.imwrite(file_name, frame)
+                break
+            '''
             time.sleep(1)
             print(c)
             file_name =c
