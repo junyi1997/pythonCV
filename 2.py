@@ -61,7 +61,7 @@ if __name__ == '__main__':
     c=str("test"+str(sum1)+".jpg")
     print(c)
     #make_photo(c)
-    #p(c)
+    p(c)
     
 '''
 from PIL import Image,ImageTk
