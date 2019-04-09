@@ -19,14 +19,14 @@ def adj(file_name,c):
     cv2.waitKey()
 
 
-def make_photo(sum1):
+def make_photo(c):
     """使用opencv拍照"""
     cap = cv2.VideoCapture(0)  # 默认的摄像头
     while True:
         ret, frame = cap.read()
         if ret:
             cv2.imshow("capture", frame)  # 弹窗口
-            # 等待按键q操作关闭摄像头12313
+            # 等待按键q操作关闭摄像头
 
             #if cv2.waitKey(1) & 0xFF == ord('q'):
                 #file_name =c
