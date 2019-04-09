@@ -19,7 +19,7 @@ def adj(file_name,c):
     cv2.waitKey()
 
 
-def make_photo(c,sum1):
+def make_photo(c):
     """使用opencv拍照"""
     cap = cv2.VideoCapture(0)  # 默认的摄像头
     while True:
@@ -29,7 +29,7 @@ def make_photo(c,sum1):
             # 等待按键q操作关闭摄像头
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                file_name ="test"+str(sum1)+".jpg"
+                file_name =c
                 cv2.imwrite(file_name, frame)
                 break
             '''
@@ -60,7 +60,7 @@ if __name__ == '__main__':
     sum1=input("請輸入sum1值：")
     c=str("test"+str(sum1)+".jpg")
     print(c)
-    make_photo(c,sum1)
+    #make_photo(c)
     #p(c)
     
 '''
