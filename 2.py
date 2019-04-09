@@ -35,7 +35,7 @@ def make_photo():
             
             time.sleep(1)
             c="test"+str(sum1)+".jpg"
-            print(C)
+            print(c)
             file_name = c
             cv2.imwrite(file_name, frame)  
             break 
