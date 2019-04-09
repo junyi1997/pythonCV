@@ -8,9 +8,9 @@ import time
 sum1=1
 
 
-def adj(file_name,c):
+def adj(c):
     print("影像處理中")
-    img = cv2.imread(file_name)
+    img = cv2.imread(c)
     resImg1 = cv2.resize(img, (100,100), interpolation=cv2.INTER_CUBIC)
     print("影像顯示")
     cv2.imwrite(c,resImg1)
@@ -29,19 +29,19 @@ def make_photo(c):
             # 等待按键q操作关闭摄像头
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                file_name =c
-                cv2.imwrite(file_name, frame)
+                #file_name =c
+                cv2.imwrite(c, frame)
                 break
             '''
             time.sleep(1)
             print(c)
-            file_name =c
-            cv2.imwrite(file_name, frame)  
+            #file_name =c
+            cv2.imwrite(c, frame)  
             break 
             '''
         else:
             break
-    adj(file_name,c)
+    adj(c)
     cap.release()
     cv2.destroyAllWindows()
     p(c)
