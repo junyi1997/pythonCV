@@ -11,7 +11,8 @@ def p(c):
     #im=Image.open(c)
     img=ImageTk.PhotoImage(Image.open(c))
     #img=tk.PhotoImage(file=r"./"+c)
-    imLabel=tk.Label(win,image=img).pack()
+    imLabel=tk.Label(win,image=img)
+    imLabel.place(x=290,y=213)
     win.mainloop()
 
 def adj(c):
