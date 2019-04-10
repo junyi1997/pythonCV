@@ -21,6 +21,7 @@ def adj(c):
     resImg1 = cv2.resize(img, (100,100), interpolation=cv2.INTER_CUBIC)
     #cv2.imshow('img', img)
     cv2.imwrite(c, resImg1) 
+    #cv2.cv2.imencode('.jpg', resImg1)[1]
     cv2.imshow('resImg', resImg1)
     #cv2.waitKey()
     p(c)
