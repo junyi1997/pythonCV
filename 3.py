@@ -8,6 +8,7 @@ import time
 def p(c):
     print("進入Tk頁面")
     win = tk.Tk()
+    
     #im=Image.open(c)
     print(c)
     img1=ImageTk.PhotoImage(Image.open(c))
