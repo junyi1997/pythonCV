@@ -62,10 +62,10 @@ import tkinter as tk
 # 简单插入显示
 def show_jpg():
     while True:
-        if 0xFF == ord('q'):
+        sum1=input("請輸入sum1值：")
+        if sum1=='q':
             break
         else:    
-            sum1=input("請輸入sum1值：")
             c="test"+str(sum1)+".jpg"
             root = tk.Tk()
             im=Image.open(c)
