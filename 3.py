@@ -27,7 +27,7 @@ def adj(c):
     cv2.imwrite(c, resImg1) 
     cv2.imshow('resImg', resImg1)
     cv2.waitKey()
-    #p(c)
+    p(c)
 
 
 def make_photo():
