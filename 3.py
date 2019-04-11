@@ -33,12 +33,13 @@ def make_photo():
             break
         else:
             c="test"+str(sum1)+".jpg"
+            print(c)
             """使用opencv拍照"""
             cap = cv2.VideoCapture(0)  # 默认的摄像头
             while True:
-                print("拍照成功")
                 ret, frame = cap.read()
                 if ret:
+                    print("拍照成功")
                     time.sleep(1)
                     cv2.imwrite(c, frame)  
                     break 
