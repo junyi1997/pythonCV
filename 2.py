@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import time
 c=""   
-def p():
+def p(c):
     global c
     print("進入Tk頁面")
     win = tk.Tk()
@@ -16,7 +16,7 @@ def p():
     imLabel.place(x=290,y=213)
     win.mainloop()
 
-def adj():
+def adj(c):
     global c
     print("影像處理中")
     img = cv2.imread(c)
@@ -26,7 +26,7 @@ def adj():
     #cv2.imencode('.jpg', resImg1)[1]
     cv2.imshow('resImg', resImg1)
     #cv2.waitKey()
-    p()
+    p(c)
 
 
 def make_photo(sum1):
@@ -56,7 +56,7 @@ def make_photo(sum1):
         else:
             print("拍照失敗")
             break
-    adj()
+    adj(c)
     cap.release()
     cv2.destroyAllWindows()
  
