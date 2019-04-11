@@ -22,8 +22,8 @@ def adj():
     img = cv2.imread(c)
     resImg1 = cv2.resize(img, (100,100), interpolation=cv2.INTER_CUBIC)
     #cv2.imshow('img', img)
-    #cv2.imwrite(c, resImg1) 
-    cv2.imencode('.jpg', resImg1)[1]
+    cv2.imwrite(c, resImg1) 
+    #cv2.imencode('.jpg', resImg1)[1]
     cv2.imshow('resImg', resImg1)
     #cv2.waitKey()
     p()
@@ -36,6 +36,7 @@ def make_photo(sum1):
     while True:
         ret, frame = cap.read()
         if ret:
+            print("拍照成功")
             # cv2.imshow("capture", frame)  # 弹窗口
             # 等待按键q操作关闭摄像头12313
             '''
@@ -53,6 +54,7 @@ def make_photo(sum1):
             break 
             
         else:
+            print("拍照失敗")
             break
     adj()
     cap.release()
