@@ -42,6 +42,7 @@ def make_photo(sum1):
 
                 break
             '''   
+            c=''
             time.sleep(1)
             c="test"+str(sum1)+".jpg"
             
