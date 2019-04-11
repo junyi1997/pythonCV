@@ -11,7 +11,7 @@ def p(c):
     #im=Image.open(c)
     print(c)
     img1=ImageTk.PhotoImage(Image.open(c))
-    cv2.imshow('img', img1)
+    #cv2.imshow('img', img1)
     print("開啟圖片")
     #img=tk.PhotoImage(file=r"./"+c)
     imLabel=tk.Label(win,image=img1)
