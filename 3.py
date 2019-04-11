@@ -11,9 +11,11 @@ def p(c):
     #im=Image.open(c)
     print(c)
     img=ImageTk.PhotoImage(Image.open(c))
+    print("開啟圖片")
     #img=tk.PhotoImage(file=r"./"+c)
     imLabel=tk.Label(win,image=img)
     imLabel.place(x=290,y=213)
+    print("顯示圖片")
     win.mainloop()
 
 def adj(c):
