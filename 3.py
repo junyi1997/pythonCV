@@ -9,6 +9,7 @@ def p(c):
     print("進入Tk頁面")
     win = tk.Tk()
     #im=Image.open(c)
+    print(c)
     img=ImageTk.PhotoImage(Image.open(c))
     #img=tk.PhotoImage(file=r"./"+c)
     imLabel=tk.Label(win,image=img)
