@@ -61,12 +61,16 @@ from PIL import Image,ImageTk
 import tkinter as tk
 # 简单插入显示
 def show_jpg():
-    sum1=input("請輸入sum1值：")
-    c="test"+str(sum1)+".jpg"
-    root = tk.Tk()
-    im=Image.open(c)
-    img=ImageTk.PhotoImage(im)
-    imLabel=tk.Label(root,image=img).pack()
-    root.mainloop()
+    while True:
+        if 0xFF == ord('q'):
+            break
+        else:    
+            sum1=input("請輸入sum1值：")
+            c="test"+str(sum1)+".jpg"
+            root = tk.Tk()
+            im=Image.open(c)
+            img=ImageTk.PhotoImage(im)
+            imLabel=tk.Label(root,image=img).pack()
+            root.mainloop()
 if __name__ == '__main__':
     show_jpg()
