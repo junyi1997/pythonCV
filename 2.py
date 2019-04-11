@@ -55,6 +55,7 @@ def make_photo(sum1):
     cv2.destroyAllWindows()
  
 if __name__ == '__main__':
+    c=""
     sum1=input("請輸入sum1值：")
     make_photo(sum1)
 
