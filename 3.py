@@ -1,3 +1,4 @@
+'''
 from PIL import Image,ImageTk
 import tkinter as tk
 import cv2
@@ -33,15 +34,14 @@ def make_photo(sum1):
         if ret:
             # cv2.imshow("capture", frame)  # 弹窗口
             # 等待按键q操作关闭摄像头12313
-            '''
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                file_name = "test.jpg"
-                cv2.imwrite(file_name, frame)
-                break
-            '''   
+
+            #if cv2.waitKey(1) & 0xFF == ord('q'):
+            #    file_name = "test.jpg"
+            #    cv2.imwrite(file_name, frame)
+            #    break
+  
             time.sleep(1)
             c="test"+str(sum1)+".jpg"
-            
             cv2.imwrite(c, frame)  
             break 
             
@@ -61,11 +61,12 @@ from PIL import Image,ImageTk
 import tkinter as tk
 # 简单插入显示
 def show_jpg():
+    sum1=input("請輸入sum1值：")
+    c="test"+str(sum1)+".jpg"
     root = tk.Tk()
-    im=Image.open("test2.jpg")
+    im=Image.open(c)
     img=ImageTk.PhotoImage(im)
     imLabel=tk.Label(root,image=img).pack()
     root.mainloop()
 if __name__ == '__main__':
     show_jpg()
-'''
