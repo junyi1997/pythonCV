@@ -4,8 +4,9 @@ import tkinter as tk
 import cv2
 import numpy as np
 import time
-   
-def p(c):
+c=""   
+def p():
+    global c
     print("進入Tk頁面")
     win = tk.Tk()
     #im=Image.open(c)
@@ -15,7 +16,8 @@ def p(c):
     imLabel.place(x=290,y=213)
     win.mainloop()
 
-def adj(c):
+def adj():
+    global c
     print("影像處理中")
     img = cv2.imread(c)
     resImg1 = cv2.resize(img, (100,100), interpolation=cv2.INTER_CUBIC)
@@ -24,10 +26,11 @@ def adj(c):
     cv2.imencode('.jpg', resImg1)[1]
     cv2.imshow('resImg', resImg1)
     #cv2.waitKey()
-    p(c)
+    p()
 
 
 def make_photo(sum1):
+    global c
     """使用opencv拍照"""
     cap = cv2.VideoCapture(0)  # 默认的摄像头
     while True:
@@ -51,7 +54,7 @@ def make_photo(sum1):
             
         else:
             break
-    adj(c)
+    adj()
     cap.release()
     cv2.destroyAllWindows()
  
