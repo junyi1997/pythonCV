@@ -10,11 +10,11 @@ def p(c):
     win = tk.Tk()
     #im=Image.open(c)
     print(c)
-    img=ImageTk.PhotoImage(Image.open(c))
-    cv2.imshow('img', img)
+    img1=ImageTk.PhotoImage(Image.open(c))
+    cv2.imshow('img', img1)
     print("開啟圖片")
     #img=tk.PhotoImage(file=r"./"+c)
-    imLabel=tk.Label(win,image=img)
+    imLabel=tk.Label(win,image=img1)
     imLabel.place(x=290,y=213)
     print("顯示圖片")
     win.mainloop()
@@ -26,8 +26,8 @@ def adj(c):
     #cv2.imshow('img', img)
     cv2.imwrite(c, resImg1) 
     cv2.imshow('resImg', resImg1)
-    #cv2.waitKey()
-    p(c)
+    cv2.waitKey()
+    #p(c)
 
 
 def make_photo():
