@@ -29,8 +29,9 @@ def adj(c):
     p(c)
 
 
-def make_photo(sum1):
+def make_photo():
     
+    sum1=input("請輸入sum1值：")
     """使用opencv拍照"""
     cap = cv2.VideoCapture(0)  # 默认的摄像头
     while True:
@@ -60,8 +61,8 @@ def make_photo(sum1):
     cv2.destroyAllWindows()
  
 if __name__ == '__main__':
-    sum1=input("請輸入sum1值：")
-    make_photo(sum1)
+    
+    make_photo()
 
     
 '''
